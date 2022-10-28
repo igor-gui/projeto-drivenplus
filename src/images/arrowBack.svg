@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="7.4083099mm"
+   height="7.2214966mm"
+   viewBox="0 0 7.4083099 7.2214966"
+   version="1.1"
+   id="svg5"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     showgrid="false" />
+  <defs
+     id="defs2">
+    <clipPath
+       id="clip0_6_174">
+      <rect
+         width="28"
+         height="32"
+         fill="#ffffff"
+         transform="matrix(1,0,0,-1,0,32)"
+         id="rect351"
+         x="0"
+         y="0" />
+    </clipPath>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-94.441141,-143.61377)">
+    <g
+       clip-path="url(#clip0_6_174)"
+       id="g349"
+       transform="matrix(0.26458333,0,0,0.26458333,94.441145,142.99117)">
+      <path
+         d="m 16.0937,4.18125 -1.3875,-1.3875 c -0.5875,-0.5875 -1.5375,-0.5875 -2.1188,0 L 0.437451,14.9375 c -0.5875,0.5875 -0.5875,1.5375 0,2.1188 l 12.149949,12.15 c 0.5875,0.5875 1.5375,0.5875 2.1188,0 l 1.3875,-1.3875 c 0.5937,-0.5938 0.5812,-1.5625 -0.025,-2.1438 L 8.53745,18.5 H 26.4999 c 0.8313,0 1.5,-0.6687 1.5,-1.5 v -2 c 0,-0.8312 -0.6687,-1.5 -1.5,-1.5 H 8.53745 L 16.0687,6.325 c 0.6125,-0.58125 0.625,-1.55 0.025,-2.14375 z"
+         fill="#ffffff"
+         id="path347" />
+    </g>
+  </g>
+</svg>

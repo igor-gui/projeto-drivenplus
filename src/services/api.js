@@ -24,3 +24,14 @@ export function pegarPlanos(token){
     const promise = api.get('/subscriptions/memberships', config)
     return promise
 }
+
+export function pegarPlano(id, token){
+    const config = {
+        headers: {
+            Authorization: `Bearer ${token}`
+        }
+    }
+
+    const promise = api.get(`subscriptions/memberships/${id}`, config)
+    return promise
+}

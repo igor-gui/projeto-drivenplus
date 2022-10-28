@@ -1,7 +1,7 @@
-import plans from '../planos'
+// import plans from '../planos'
 import Plano from '../components/Plano'
 import styled from 'styled-components'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { useContext } from 'react'
 import { AuthContext } from '../contexts/auth'
 import { pegarPlanos } from '../services/api'
@@ -11,18 +11,20 @@ import { pegarPlanos } from '../services/api'
 export default function Subscriptions() {
 
     const {user} = useContext(AuthContext)
+    const [plans, setPlans] = useState([])
 
     useEffect(() => {
         pegarPlanos(user.token)
-        .then((res) => console.log(res.data))
+        .then((res) => setPlans(res.data))
         .catch((err) => console.log(err.response.data))
+        
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
     return (
         <SuscriptionStyle>
             <h1>Escolha seu Plano</h1>
             <div className="planos">
-                {plans.map((e) => <Plano logo={e.logo} price={e.price} />)}
+                {plans.map((e) => <Plano id={e.id} key={e.id} logo={e.image} price={e.price} />)}
             </div>
         </SuscriptionStyle>
     )

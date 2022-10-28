@@ -47,3 +47,97 @@ export const UserPass = styled.main`
         color: white;
     }
 `
+export const BuyForm = styled.form`
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        justify-content: center;
+        margin-bottom: 24px;
+        input {
+            padding-left: 14px;
+            box-sizing: border-box;
+            height: 52px;
+            width: 299px;
+            border-radius: 8px;
+            border: 0;
+            display: flex;
+        }
+        .verso{
+            display: flex;
+            justify-content: center;
+            gap: 9px;
+            input {
+                height: 52px;
+                width: 145px;
+                border-radius: 8px;
+            }
+        }
+        .botao{
+            padding-left: 0;
+            width: 298px;
+            background-color: #FF4791;
+            color: #FFFFFF;
+            margin-top: 8px;
+            font-family: 'Roboto';
+            font-size: 14px;    
+            font-weight: 700;
+            background-color: #FF4791;
+        }
+    
+`
+
+export const SubsBuy = styled.main`
+    a{
+        position: fixed;
+        top: 0;
+        box-sizing: border-box;
+        padding-left:22px;
+        padding-top: 22px;
+    }
+    font-family: 'Roboto';
+    font-size: 14px;
+    font-weight: 400;
+    height: 667px;
+    width: 375px;
+    display: flex;
+    flex-direction: column;
+    background-color: #0E0E13;
+    color: #FFFFFF;
+    ul{
+        gap:3px;
+    }
+    .titulo{
+        margin-top: 11px;
+        font-family: 'Roboto';
+        font-size: 32px;
+        font-weight: 700;
+        text-align: left;
+        margin-bottom: 22px;
+
+    }
+    .info{
+        display: flex;
+        flex-direction: column;
+        margin-left: 44px;
+        margin-bottom: 34px;
+        gap: 11px;
+        br {
+            margin-bottom: 4px;
+        }
+    }
+    .topo{
+        margin-top: 87px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img{
+            width: 139.38px;
+        }
+
+    }
+    .form{
+        display: flex;
+        flex-direction: column;
+    }
+`
