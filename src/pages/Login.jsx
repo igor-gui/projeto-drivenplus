@@ -23,10 +23,10 @@ export default function Login() {
             .then((res) => {
                 console.log(res.data)
                 setUser(res.data)
-                if(user.membership == null){
+                if(user.membership === null){
                 nav('/subscriptions')
                 }
-                if(user.membership != null){
+                if(user.membership !== null){
                 nav(`/home`)
                 }
             })

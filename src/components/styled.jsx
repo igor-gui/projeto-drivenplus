@@ -83,18 +83,12 @@ export const BuyForm = styled.form`
             font-size: 14px;    
             font-weight: 700;
             background-color: #FF4791;
+            cursor: pointer;
         }
     
-`
+        `
 
 export const SubsBuy = styled.main`
-    a{
-        position: fixed;
-        top: 0;
-        box-sizing: border-box;
-        padding-left:22px;
-        padding-top: 22px;
-    }
     font-family: 'Roboto';
     font-size: 14px;
     font-weight: 400;
@@ -104,40 +98,99 @@ export const SubsBuy = styled.main`
     flex-direction: column;
     background-color: #0E0E13;
     color: #FFFFFF;
-    ul{
-        gap:3px;
-    }
-    .titulo{
-        margin-top: 11px;
-        font-family: 'Roboto';
-        font-size: 32px;
-        font-weight: 700;
-        text-align: left;
-        margin-bottom: 22px;
 
-    }
-    .info{
-        display: flex;
-        flex-direction: column;
-        margin-left: 44px;
-        margin-bottom: 34px;
-        gap: 11px;
-        br {
-            margin-bottom: 4px;
+        a{
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            box-sizing: border-box;
+            padding-left:22px;
+            padding-top: 22px;
         }
-    }
-    .topo{
-        margin-top: 87px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        img{
-            width: 139.38px;
+        ul{
+            gap:3px;
+            list-style: decimal;
         }
+        .titulo{
+            margin-top: 11px;
+            font-family: 'Roboto';
+            font-size: 32px;
+            font-weight: 700;
+            text-align: left;
+            margin-bottom: 22px;
 
-    }
-    .form{
-        display: flex;
-        flex-direction: column;
-    }
+        }
+        .info{
+            display: flex;
+            flex-direction: column;
+            margin-left: 44px;
+            margin-bottom: 34px;
+            gap: 11px;
+            br {
+                margin-bottom: 4px;
+            }
+        }
+        .topo{
+            margin-top: 87px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            img{
+                width: 139.38px;
+            }
+
+        }
+        .form{
+            display: flex;
+            flex-direction: column;
+        }
 `
+
+export const ConfirmArea = styled.div`
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        position: fixed;
+        z-index: 3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            
+            height: 210px;
+            width: 248px;
+            border-radius: 12px;
+            background-color: #FFFFFF;
+            p {
+                margin-top: 33px;
+                color: black;
+                font-family: 'Roboto';
+                font-size: 18px;
+                font-weight: 700;
+                text-align: center;
+            }
+            .buttons {
+                color: white;
+                display: flex;
+                flex-direction: row;
+                gap: 14px;
+                input:first-child {
+                    background-color: #CECECE;
+                }
+                input:last-child {
+                    background-color: #FF4791;
+                }
+                input {
+                    height: 52px;
+                    width: 95px;
+                    border-radius: 8px;
+                    border: 0;
+                    cursor: pointer;
+                }
+            }
+        }
+    `

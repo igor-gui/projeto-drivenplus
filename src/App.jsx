@@ -5,6 +5,7 @@ import Purcharse from "./pages/Purcharse";
 import Subscriptions from "./pages/Subscrptions";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
+import Home from "./pages/Home";
 
 export default function App() {
 
@@ -19,6 +20,7 @@ export default function App() {
                     <Route path="/sign-up" element={<SignUp />} />
                     <Route path="/subscriptions" element={<Subscriptions />} />
                     <Route path="/subscriptions/:planId" element={<Purcharse />} />
+                    <Route path='/home' element={<Home />} />
                 </Routes>
             </BrowserRouter>
         </AuthContextProvider>
