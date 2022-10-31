@@ -26,7 +26,7 @@ export default function Purcharse() {
     useEffect(() => {
         pegarPlano(planId, user.token)
             .then((res) => {
-                setUser({...user, [user.membership]: data})
+                setUser({...user, [user.membership]: res.data})
                 setData(res.data)
                 setBeneficios(res.data.perks)
                 console.log(res.data)

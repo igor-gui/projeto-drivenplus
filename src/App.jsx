@@ -6,6 +6,8 @@ import Subscriptions from "./pages/Subscrptions";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
 import Home from "./pages/Home";
+import User from "./pages/User";
+import UserUpdate from "./pages/UserUpdate";
 
 export default function App() {
 
@@ -21,6 +23,8 @@ export default function App() {
                     <Route path="/subscriptions" element={<Subscriptions />} />
                     <Route path="/subscriptions/:planId" element={<Purcharse />} />
                     <Route path='/home' element={<Home />} />
+                    <Route path='/users/:idUser' element={<User />}/>
+                    <Route path='/users/:idUser/update' element={<UserUpdate />}/>
                 </Routes>
             </BrowserRouter>
         </AuthContextProvider>

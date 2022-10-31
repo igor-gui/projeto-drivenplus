@@ -55,3 +55,13 @@ export function cancelarPlano(token){
     const promise = api.delete('/subscriptions', config)
     return promise
 }
+
+export function alterarUsuario(body, token){
+    const config = {
+        headers: {
+            Authorization: `Bearer ${token}`
+        }
+    }
+    const promise = api.put('/users', body, config)
+    return promise
+}

@@ -1,24 +1,22 @@
 import prof from '../images/prof.svg'
 import styled from 'styled-components'
-import { useContext, useEffect } from 'react'
+import { useContext } from 'react'
 import { AuthContext } from '../contexts/auth'
-import { cancelarPlano, pegarPlano } from '../services/api'
+import { cancelarPlano } from '../services/api'
 import { Link, useNavigate } from 'react-router-dom'
 
 export default function Home() {
 
     const { user } = useContext(AuthContext)
 
-    useEffect(() => {
-        pegarPlano()
-    })
+
     const nav = useNavigate()
 
     function deletarPlano(token){
             cancelarPlano(token)
             .then((res) => {
                 console.log(res.data)
-                alert('Plano calcelado com sucesso')
+                alert('Plano cancelado com sucesso')
                 nav('/subscriptions')
             })
             .catch((err) => console.log(err.response.data))
@@ -28,7 +26,7 @@ export default function Home() {
         <HomeS>
             <header>
                 <img className='logo' src={user.membership.image} alt="" />
-                <img src={prof} alt="" />
+                <Link to={`/users/${user.id}`} className='goToUser'><img src={prof} alt="" /></Link>
             </header>
 
             <div className="perks-box">
@@ -61,11 +59,15 @@ const HomeS = styled.main`
             top: 0;
             display: flex;
             gap: 206px;
-            img {
-                margin-top: 22px;
-                margin-right: 22px;
+            .goToUser{
+                width: 34px;
+                height: 34px;
+                background-color: rgba(0 , 0 , 0 , 0);
+                img {
+                    margin-top: 22px;
+                    margin-right: 22px;
+                }
             }
-
             .logo {
                 margin-top: 32px;
                 margin-left: 38px;

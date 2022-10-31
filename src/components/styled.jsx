@@ -47,6 +47,7 @@ export const UserPass = styled.main`
         font-size: 14px;
         font-weight: 400;
         color: white;
+        cursor: pointer;
     }
 `
 export const BuyForm = styled.form`
@@ -128,6 +129,11 @@ export const SubsBuy = styled.main`
             margin-left: 44px;
             margin-bottom: 34px;
             gap: 11px;
+            ul {
+                display: flex;
+                flex-direction: column;
+                margin-left: 15px;
+            }
             br {
                 margin-bottom: 4px;
             }
@@ -196,3 +202,71 @@ export const ConfirmArea = styled.div`
             }
         }
     `
+export const UserDataStyle = styled.main`
+min-height: 667px;
+min-width: 375px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+background-color: #0E0E13;
+    .home {
+        height: 32px;
+        width: 28px;
+        position: fixed;
+        top: 22px;
+        left: 22px;
+    }
+    .data{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 16px;
+        input {
+            height: 52px;
+            width: 299px;
+            border-radius: 8px;
+            text-align: left;
+            font-size: 14px;
+            font-family: 'Roboto';
+            padding-left: 14px;
+            background-color: white;
+        }
+        .botao {
+            height: 52px;
+            width: 299px;
+            border-radius: 8px;
+            background-color: #FF4791;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            text-decoration: none;
+            border: 0;
+    
+            font-family: 'Roboto';
+            font-size: 14px;
+            font-weight: 700;
+            color: white;
+        }
+    }
+    .botao {
+            height: 52px;
+            width: 299px;
+            border-radius: 8px;
+            background-color: #FF4791;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            text-decoration: none;
+            border: 0;
+    
+            font-family: 'Roboto';
+            font-size: 14px;
+            font-weight: 700;
+            color: white;
+        }
+`
