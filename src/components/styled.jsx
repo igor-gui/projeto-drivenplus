@@ -27,6 +27,8 @@ export const UserPass = styled.main`
             border-radius: 8px;
             border: 0;
             display: flex;
+            align-items: center;
+            justify-content: center;
 
         }
         .botao{

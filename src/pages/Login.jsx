@@ -8,7 +8,7 @@ import { AuthContext } from '../contexts/auth'
 export default function Login() {
     const [form, setForm] = useState({ email: '', password: '' })
     const nav = useNavigate()
-    const {user, setUser } = useContext(AuthContext)
+    const { setUser } = useContext(AuthContext)
 
     function handleForm(e) {
         setForm({ ...form, [e.target.name]: e.target.value })
@@ -18,16 +18,16 @@ export default function Login() {
     function handleSubmit(e) {
         e.preventDefault()
         console.log(form)
-
         entrar(form)
             .then((res) => {
                 console.log(res.data)
                 setUser(res.data)
-                if(user.membership === null){
+                
+                if(res.data.membership === null){
                 nav('/subscriptions')
                 }
-                if(user.membership !== null){
-                nav(`/home`)
+                if(res.data.membership){
+                nav('/home')
                 }
             })
             .catch((err) => console.log(err.response.status))

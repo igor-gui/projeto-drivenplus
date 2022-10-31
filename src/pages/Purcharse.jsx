@@ -10,7 +10,7 @@ import ComfirmPurcharse from '../components/ConfirmPurcharse'
 
 export default function Purcharse() {
 
-    const { user } = useContext(AuthContext)
+    const { user , setUser } = useContext(AuthContext)
     const { planId } = useParams()
     const [data, setData] = useState({})
     const [beneficios, setBeneficios] = useState([])
@@ -26,6 +26,7 @@ export default function Purcharse() {
     useEffect(() => {
         pegarPlano(planId, user.token)
             .then((res) => {
+                setUser({...user, [user.membership]: data})
                 setData(res.data)
                 setBeneficios(res.data.perks)
                 console.log(res.data)

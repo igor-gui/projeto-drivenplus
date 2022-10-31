@@ -6,7 +6,7 @@ import { ConfirmArea } from "./styled";
 
 export default function Confirm({ price, name, showConfirm, setShowConfirm, formData }) {
 
-    const { user, setUser } = useContext(AuthContext)
+    const { user } = useContext(AuthContext)
     const nav = useNavigate()
 
     function confirmar(body, token) {

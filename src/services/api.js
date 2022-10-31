@@ -45,3 +45,13 @@ export function assinarPlano(body, token) {
     const promise = api.post(`/subscriptions`, body, config)
     return promise
 }
+
+export function cancelarPlano(token){
+    const config = {
+        headers: {
+            Authorization: `Bearer ${token}`
+        }
+    }
+    const promise = api.delete('/subscriptions', config)
+    return promise
+}

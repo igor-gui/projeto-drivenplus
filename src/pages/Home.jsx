@@ -1,31 +1,48 @@
-import logoPlus from '../images/LogoPlus.svg'
 import prof from '../images/prof.svg'
 import styled from 'styled-components'
+import { useContext, useEffect } from 'react'
+import { AuthContext } from '../contexts/auth'
+import { cancelarPlano, pegarPlano } from '../services/api'
+import { Link, useNavigate } from 'react-router-dom'
 
 export default function Home() {
 
+    const { user } = useContext(AuthContext)
+
+    useEffect(() => {
+        pegarPlano()
+    })
+    const nav = useNavigate()
+
+    function deletarPlano(token){
+            cancelarPlano(token)
+            .then((res) => {
+                console.log(res.data)
+                alert('Plano calcelado com sucesso')
+                nav('/subscriptions')
+            })
+            .catch((err) => console.log(err.response.data))
+    }
 
     return (
         <HomeS>
             <header>
-                <img className='logo' src={logoPlus} alt="" />
+                <img className='logo' src={user.membership.image} alt="" />
                 <img src={prof} alt="" />
             </header>
 
             <div className="perks-box">
 
-                <h1>Olá Fulano</h1>
+                <h1>Olá {user.name}</h1>
 
                 <div className="perks">
-                    <input type="button" value='Solicitar brindes' />
-                    <input type="button" value='Materiais bônus de web' />
-                    <input type="button" value='Aulas bônus de tech' />
+                    {user.membership.perks.map((e) => <a key={e.id} href={e.link} rel='noreferrer' target='_blank'>{e.title}</a>) }
                 </div>
             </div>
 
             <div className="menu">
-                <input type="button" value='Mudar plano' />
-                <input className='cancel' type="button" value='Cancelar plano' />
+                <Link to='/subscriptions'>Mudar plano</Link>
+                <input onClick={() => deletarPlano(user.token)} className='cancel' type="button" value='Cancelar plano' />
             </div>
         </HomeS>
     )
@@ -38,6 +55,7 @@ const HomeS = styled.main`
         background-color: #0E0E13;
         height: 667px;
         position: relative;
+
         header {
             position: fixed;
             top: 0;
@@ -52,6 +70,20 @@ const HomeS = styled.main`
                 margin-top: 32px;
                 margin-left: 38px;
             }
+        }
+        a{
+            height: 52px;
+            width: 299px;
+            border-radius: 8px;
+            background-color: #FF4791;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-family: 'Roboto';
+            font-size: 14px;
+            font-weight: 700;
+            color: white;
         }
     h1 {
         font-family: 'Roboto';
@@ -99,8 +131,8 @@ const HomeS = styled.main`
             border-radius: 8px;
             background-color: #FF4791;
             display: flex;
-            flex-direction: column;
         }
+        
     }
     
     .menu {
