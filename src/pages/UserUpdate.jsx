@@ -28,7 +28,7 @@ export default function UserUpdate() {
     }
     return (
         <UserDataStyle>
-            <Link to='/home' className='home'>
+            <Link to={`/users/${user.id}`} className='home'>
                 <img src={arrowBack} alt="" />
             </Link>
             <form className="data" onSubmit={handleSubmit}>
