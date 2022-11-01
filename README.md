@@ -1,6 +1,6 @@
 <h1>Driven Plus</h1>
 
-<p> O projeto consiste em uma SPA no modelo mobile, onde o usuário pode escolher entre três tipo diferentes de planos pagos. Com preço e benefícios que mudam de acordo com a escolha do cliente. </p>
+<p> O projeto consiste em uma SPA no modelo mobile, onde o usuário pode escolher entre três tipo diferentes de planos pagos. Com preços e benefícios que mudam de acordo com a escolha do cliente. </p>
 
 <p>Perceba que a rota muda de acordo com a navegação, facilitando o acesso do usuário aos dados, porém não existe a necessidade da página recarregar, pois a rota fica funcional por conta do <b>React Router Dom</b></p>
 
